@@ -116,6 +116,11 @@ def test_ensure_clone_submission_by_uuid(
             assert asset == db_asset
             assert asset.guid == expected_guid
 
+        # Just to prove that this should work
+        assets = Asset.query.all()
+        for asset in assets:
+            print("Asset : {} ".format(asset))
+
     except Exception as ex:
         raise ex
     finally:

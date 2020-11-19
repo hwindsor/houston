@@ -77,3 +77,4 @@ def list_users(context):
     users = User.query.all()
     for user in users:
         print("User : {} ".format(user))
+        print("submissions {}".format(user.submissions))
